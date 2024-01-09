@@ -13,6 +13,7 @@ export default function Home() {
   const [filteredTxn, setFilterdTxn] = useState(transactions);
   const [selectedIdx, setSelectedIdx] = useState(0);
   const [lastSortOrder, setLastSortOrder] = useState(null);
+  const [lastDateSortOrder, setLastDateSortOrder] = useState(null);
 
   const itemsPerPage = 15;
   const totalPages = Math.ceil(transactions.length / itemsPerPage);
@@ -41,11 +42,21 @@ export default function Home() {
   );
 
   const sortByDate = () => {
-    const sortedTransactions = transactions.sort((a, b) => {
-      return new Date(b.date) - new Date(a.date);
-    });
+    if (lastDateSortOrder === null || lastDateSortOrder === 'asc') {
+      const sortedTransactions = [...transactions].sort((a, b) => {
+        return new Date(a.date) - new Date(b.date);
+      });
 
-    setFilterdTxn(sortedTransactions);
+      setFilterdTxn(sortedTransactions);
+      setLastDateSortOrder('desc');
+    } else {
+      const sortedTransactions = [...transactions].sort((a, b) => {
+        return new Date(b.date) - new Date(a.date);
+      });
+
+      setFilterdTxn(sortedTransactions);
+      setLastDateSortOrder('asc');
+    }
   };
 
   const sortByAmount = () => {
