@@ -23,53 +23,113 @@ export default function SiderBar() {
     >
       <CompanyInfo />
       <ul className="flex flex-col gap-y-1 overflow-y-auto">
-        <li className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white hover:bg-[#ffff]/10 rounded-[4px]">
-          <HomeIcon />
-          <Link href="/">Home</Link>
+        <li>
+          <Link
+            className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white hover:bg-[#ffff]/10 z"
+            href="/"
+          >
+            <HomeIcon />
+            Home
+          </Link>
         </li>
-        <li className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded-[4px]">
-          <Copy />
-          <Link href="/">Orders</Link>
+        <li>
+          <Link
+            className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded"
+            href="/"
+          >
+            <Copy />
+            Orders
+          </Link>
         </li>
-        <li className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded-[4px]">
-          <Squares />
-          <Link href="/">Products</Link>
+        <li>
+          <Link
+            className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded"
+            href="/"
+          >
+            <Squares />
+            Products
+          </Link>
         </li>
-        <li className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded-[4px]">
-          <Truck />
-          <Link href="/">Delivery</Link>
+        <li>
+          <Link
+            className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded"
+            href="/"
+          >
+            <Truck />
+            Delivery
+          </Link>
         </li>
-        <li className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded-[4px]">
-          <Mic />
-          <Link href="/">Marketing</Link>
+        <li>
+          <Link
+            className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded"
+            href="/"
+          >
+            <Mic />
+            Marketing
+          </Link>
         </li>
-        <li className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded-[4px]">
-          <ChartIcon />
-          <Link href="/">Analytics</Link>
+        <li>
+          <Link
+            className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded"
+            href="/"
+          >
+            <ChartIcon />
+            Analytics
+          </Link>
         </li>
-        <li className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded-[4px]">
-          <CardsIcon />
-          <Link href="/">Payments</Link>
+        <li>
+          <Link
+            className="py-2 px-4 bg-white/10 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded"
+            href="/"
+          >
+            <CardsIcon />
+            Payments
+          </Link>
         </li>
-        <li className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded-[4px]">
-          <CursorIcon />
-          <Link href="/">Tools</Link>
+        <li>
+          <Link
+            className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded"
+            href="/"
+          >
+            <CursorIcon />
+            Tools
+          </Link>
         </li>
-        <li className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded-[4px]">
-          <DiscoutsIcon />
-          <Link href="/">Discounts</Link>
+        <li>
+          <Link
+            className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded"
+            href="/"
+          >
+            <DiscoutsIcon />
+            Discounts
+          </Link>
         </li>
-        <li className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded-[4px]">
-          <UsersIcon />
-          <Link href="/">Audience</Link>
+        <li>
+          <Link
+            className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded"
+            href="/"
+          >
+            <UsersIcon />
+            Audience
+          </Link>
         </li>
-        <li className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded-[4px]">
-          <ArtIcon />
-          <Link href="/">Appearance</Link>
+        <li>
+          <Link
+            className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded"
+            href="/"
+          >
+            <ArtIcon />
+            Appearance
+          </Link>
         </li>
-        <li className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded-[4px]">
-          <ShockIcon />
-          <Link href="/">Plugins</Link>
+        <li>
+          <Link
+            className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white/90 hover:bg-white/10 rounded"
+            href="/"
+          >
+            <ShockIcon />
+            Plugins
+          </Link>
         </li>
       </ul>
       <Credits />
@@ -79,8 +139,8 @@ export default function SiderBar() {
 
 function Credits() {
   return (
-    <div className="bg-[#353C53] mt-auto flex gap-x-2 rounded-[4px] items-center py-[6px] px-3 bottom-4 w-full text-white justify-self-end">
-      <div className=" bg-white/10 rounded-[4px] p-[6px]">
+    <div className="bg-[#353C53] mt-auto flex gap-x-2 rounded items-center py-1.5 px-3 bottom-4 w-full text-white justify-self-end">
+      <div className=" bg-white/10 rounded p-[6px]">
         <WalletIcon />
       </div>
       <div className="flex flex-col">

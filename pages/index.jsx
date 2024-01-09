@@ -6,13 +6,13 @@ import Layout from '@/components/Layout';
 import TransactionTable from '@/components/table/transactionsTable';
 import SearchIcon from '@/components/Icons/SearchIcon';
 import Pagination from '@/components/Pagination';
-import DropDown from '@/components/DropDown';
 import DownloadIcon from '@/components/Icons/DownloadIcon';
+import SortIcon from '@/components/Icons/SortIcon';
 
 export default function Home() {
-  const [search, setSearch] = useState('');
   const [filteredTxn, setFilterdTxn] = useState(transactions);
   const [selectedIdx, setSelectedIdx] = useState(0);
+  const [lastSortOrder, setLastSortOrder] = useState(null);
 
   const itemsPerPage = 15;
   const totalPages = Math.ceil(transactions.length / itemsPerPage);
@@ -23,8 +23,6 @@ export default function Home() {
 
   const handleSearch = (e) => {
     const searchKeyword = e.target.value.toLowerCase();
-
-    setSearch(searchKeyword);
 
     const filteredTransactions = transactions.filter(
       ({ id, amount, date, fee }) =>
@@ -50,15 +48,33 @@ export default function Home() {
     setFilterdTxn(sortedTransactions);
   };
 
+  const sortByAmount = () => {
+    if (lastSortOrder === null || lastSortOrder === 'asc') {
+      const sortedTransactions = [...transactions].sort((a, b) => {
+        return b.amount - a.amount;
+      });
+
+      setFilterdTxn(sortedTransactions);
+      setLastSortOrder('desc');
+    } else {
+      const sortedTransactions = [...transactions].sort((a, b) => {
+        return a.amount - b.amount;
+      });
+
+      setFilterdTxn(sortedTransactions);
+      setLastSortOrder('asc');
+    }
+  };
+
   return (
     <Layout>
       <Navbar />
-      <section className="bg-[#D9D9D9] h-screen overflow-y-scroll pb-8">
+      <section className="bg-[#FAFAFA] h-screen overflow-y-scroll pb-8">
         <div className="px-8 max-w-7xl mx-auto">
           <div className="flex justify-between mt-8 mb-6">
             <h2 className="text-xl font-medium text-[#1A181E]">Overview</h2>
 
-            <select className="bg-white px-2.5 py-1.5 border-[1px] border-[#D9D9D9] rounded-[4px]">
+            <select className="bg-white pl-3 pr-1.5 border-r-8 outline outline-1 outline-gray-300 border-transparent py-1.5 border border-[#D9D9D9] rounded">
               <option
                 value="Last Month"
                 className="text-[#4D4D4D] text-base font-normal"
@@ -100,10 +116,20 @@ export default function Home() {
                 />
               </div>
               <div className="flex items-center gap-x-2">
-                <DropDown />
-                <button className="bg-white px-2.5 py-2 border-[1px] border-[#D9D9D9] rounded-[4px]">
-                  <DownloadIcon />
+                <button
+                  onClick={sortByAmount}
+                  className="border-[#D9D9D9] border rounded relative font-normal text-sm px-4 py-2 text-center inline-flex items-center "
+                  type="button"
+                >
+                  Sort <SortIcon />
                 </button>
+                <a
+                  download
+                  href="/download.json"
+                  className="bg-white px-2.5 py-2 border border-[#D9D9D9] rounded"
+                >
+                  <DownloadIcon />
+                </a>
               </div>
             </div>
             <TransactionTable

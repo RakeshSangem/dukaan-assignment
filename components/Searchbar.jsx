@@ -28,7 +28,7 @@ export default function SearchBar() {
         type="text"
       />
       {/* <pre>⌘K</pre> */}
-      <div className="absolute right-2 text-xs  p-1 rounded-md top-1/2 transform -translate-y-1/2 text-slate-400 border-[1px] border-gray-300">
+      <div className="absolute right-2 text-xs  p-1 rounded-md top-1/2 transform -translate-y-1/2 text-slate-400 border border-gray-300">
         ⌘K
       </div>
     </div>
