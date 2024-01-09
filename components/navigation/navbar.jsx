@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <nav className="flex sticky bg-white items-center py-3 px-8 justify-between border-b-[1px] border-[#D9D9D9]">
       <div className="flex gap-x-4">
-        <span className="text-[#1A181E] text-[15px]">Payments</span>
+        <h1 className="text-[#1A181E] text-[15px]">Payments</h1>
         <p className="flex gap-2 items-center text-xs text-[#4D4D4D]">
           <HelpIcon /> How it works?
         </p>

@@ -7,11 +7,13 @@ export default function CompanyInfo() {
       <BrandImage />
       <div className="flex flex-col ml-[12px]">
         <h1 className="text-[15px] text-white">Nishyan</h1>
-        <a className="underline text-[13px] text-[#FFFFFF]/80">visit store</a>
+        <a className="cursor-pointer underline text-[13px] text-[#FFFFFF]/80">
+          visit store
+        </a>
       </div>
-      <div className="ml-auto ">
+      <button className="ml-auto ">
         <DropDown />
-      </div>
+      </button>
     </div>
   );
 }
