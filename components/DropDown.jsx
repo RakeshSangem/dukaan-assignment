@@ -17,24 +17,6 @@ export default function () {
         type="button"
       >
         Sort <SortIcon />
-        {/* <div
-          id="dropdown"
-          className={`z-50 absolute top-10 right-0 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ${
-            showDropdown ? 'block' : 'hidden'
-          }`}
-        >
-          <ul
-            className="py-2 text-sm text-gray-700 "
-            aria-labelledby="dropdownDefaultButton"
-          >
-            <li>
-              <button>ASC</button>
-            </li>
-            <li>
-              <button>DESC</button>
-            </li>
-          </ul>
-        </div> */}
       </button>
     </>
   );
