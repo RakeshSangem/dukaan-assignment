@@ -22,7 +22,7 @@ export default function SiderBar() {
       }
     >
       <CompanyInfo />
-      <ul className="flex flex-col gap-y-1 grow overflow-y-auto">
+      <ul className="flex flex-col gap-y-1 overflow-y-auto">
         <li className="py-2 px-4 flex items-center gap-x-3 text-sm w-full h-full text-white hover:bg-[#ffff]/10 rounded-[4px]">
           <HomeIcon />
           <Link href="/">Home</Link>
@@ -79,7 +79,7 @@ export default function SiderBar() {
 
 function Credits() {
   return (
-    <div className="bg-[#353C53] flex gap-x-2 rounded-[4px] items-center py-[6px] px-3 bottom-4 w-full text-white justify-self-end">
+    <div className="bg-[#353C53] mt-auto flex gap-x-2 rounded-[4px] items-center py-[6px] px-3 bottom-4 w-full text-white justify-self-end">
       <div className=" bg-white/10 rounded-[4px] p-[6px]">
         <WalletIcon />
       </div>

@@ -7,6 +7,7 @@ export default function SearchBar() {
   useEffect(() => {
     const handleKeyPress = (event) => {
       if ((event.metaKey || event.ctrlKey) && event.key === 'k') {
+        event.preventDefault();
         inputRef.current.focus();
       }
     };

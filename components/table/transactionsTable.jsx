@@ -1,5 +1,5 @@
 import InfoIcon from '../Icons/InfoIcon';
-
+import TraingleIcon from '../Icons/TriangleIcon';
 
 function TableRow({ elem, id }) {
   return (
@@ -20,7 +20,7 @@ function TableRow({ elem, id }) {
   );
 }
 
-export default function TransactionTable({ transactions }) {
+export default function TransactionTable({ transactions, sortByDate }) {
   return (
     <table className="w-full mt-3">
       <thead className="text-xs bg-[#F2F2F2] font-thin px-3">
@@ -28,7 +28,12 @@ export default function TransactionTable({ transactions }) {
           <th className="rounded-l-[4px] pl-3 font-normal text-start py-[10px]">
             Order ID
           </th>
-          <th className="pl-3 font-normal text-start py-[10px]">Order Date</th>
+          <th className="pl-3 flex items-center gap-x-1 font-normal text-start py-[10px]">
+            Order Date
+            <button onClick={sortByDate}>
+              <TraingleIcon />
+            </button>
+          </th>
           <th className="pl-3 font-normal text-right  py-[10px]">
             Order Amount
           </th>
